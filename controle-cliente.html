@@ -53,9 +53,10 @@
     </header>
     <section class="container" style="padding-top: 100px">
       <button
+        id="openModalBtn"
         style="margin-bottom: 20px"
         type="button"
-        class="btn btn-outline-success"
+        class="btn btn-outline-success btn-add"
       >
         Adicionar
       </button>
@@ -73,10 +74,60 @@
         </thead>
         <tbody></tbody>
       </table>
-      <div class="btnFooter">
-        <button id="btn-salvar" class="btn btn-primary btn-sm">Salvar</button>
-        <button id="btn-cancelar" class="btn btn-light btn-sm">Cancelar</button>
-      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Adicionar cliente</h4>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+
+              <div class="row">
+                <div class="col-sm-2">
+                  <label for="id" class="form-label">Id</label>
+                  <input disabled type="text" class="form-control" id="id">
+                </div>
+
+                <div class="col-sm-10">
+                  <label for="nome" class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="nome">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="text" class="form-control" id="email">
+                </div>
+                <div class="col-sm-2">
+                  <label for="telefone" class="form-label">Telefone</label>
+                  <input type="text" class="form-control" id="telefone">
+                </div>
+                <div class="col-sm-3">
+                  <label for="cpf" class="form-label">CPF</label>
+                  <input type="text" class="form-control" id="cpf">
+                </div>
+                <div class="col-sm-3">
+                  <label for="dataCadastro" class="form-label">Data de cadastro</label>
+                  <input type="date" class="form-control" id="dataCadastro" disabled>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button id="btn-salvar" class="btn btn-primary btn-sm">Salvar</button>
+            </div>
+        </div>
     </section>
     <!-- Control Client JS -->
     <script src="./script/base.js"></script>
