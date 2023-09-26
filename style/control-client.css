@@ -125,4 +125,10 @@ nav {
 
 /*Nav bar fim*/
 
-/*table*/
+/*footer*/
+
+.btnFooter {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 30px;
+}
